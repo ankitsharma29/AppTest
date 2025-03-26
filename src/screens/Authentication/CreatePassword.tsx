@@ -68,7 +68,7 @@ const VerifyEmailOtpScreen = ({ navigation }: any) => {
               onChangeText={setPassword}
             />
             <TouchableOpacity onPress={() => setIsSecure(!isSecure)}>
-              <Ionicons name={isSecure ? "eye-with-line" : "eye"} size={20} />
+              <Ionicons name={isSecure ? "eye-with-line" : "eye"} size={20} color={Colors.black()}/>
             </TouchableOpacity>
           </View>
           {/* Strength Bar */}
