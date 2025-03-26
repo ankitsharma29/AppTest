@@ -5,6 +5,7 @@ import Mixins from "../../resource/mixins/appStyle";
 import Colors from "../../resource/theme/color";
 import Fonts from "../../resource/theme/font";
 import CustomButton from "../../Components/CustomButton";
+import FooterComponent from "../../Components/FooterComponent";
 const { scaleSize, scaleFont } = Mixins;
 const HomeScreen = () => {
   return (
@@ -36,10 +37,7 @@ const HomeScreen = () => {
       </View>
       {/* Footer Section */}
       <View style={{ flex: 0.1 }}>
-        <Text style={styles.footerText}>
-          By using Classroom, you agree to the
-        </Text>
-        <Text style={styles.linkText}>Terms and Privacy Policy</Text>
+        <FooterComponent />
       </View>
     </View>
   );

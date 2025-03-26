@@ -33,7 +33,7 @@ const WelcomeScreen = ({ navigation }: any) => {
               title="Create an account"
               textStyle={styles.buttonText}
               onPress={() => {
-                navigation.navigate("HomeScreen");
+                navigation.navigate("AuthScreen");
               }}
             />
 
@@ -42,7 +42,7 @@ const WelcomeScreen = ({ navigation }: any) => {
               <Text
                 style={styles.loginText}
                 onPress={() => {
-                  navigation.navigate("HomeScreen");
+                  navigation.navigate("AuthScreen");
                 }}
               >
                 Log in

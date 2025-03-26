@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Colors from "../resource/theme/color";
 import SplashScreen from "./splash/SplashScreen";
+import AuthScreen from "./Authentication/AuthScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -49,6 +50,10 @@ const Navigation = () => {
           options={{
             title: "Get more view & Watch Time",
           }}
+        />
+        <Stack.Screen
+          name="AuthScreen"
+          component={AuthScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
