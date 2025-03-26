@@ -14,6 +14,8 @@ import Colors from "../../resource/theme/color";
 import Fonts from "../../resource/theme/font";
 import Ionicons from "react-native-vector-icons/Entypo";
 import FooterComponent from "../../Components/FooterComponent";
+import Checkbox from "react-native-check-box";
+
 const { scaleSize, scaleFont } = Mixins;
 const VerifyEmailOtpScreen = ({ navigation }: any) => {
   const [password, setPassword] = useState("");
@@ -80,15 +82,39 @@ const VerifyEmailOtpScreen = ({ navigation }: any) => {
           </View>
           {/* Password Requirements */}
           <View style={{ marginVertical: 10 }}>
-            <Text style={{ color: minLength ? "green" : "black" }}>
-              ✅ 8 characters minimum
-            </Text>
-            <Text style={{ color: hasNumber ? "green" : "black" }}>
-              ✅ a number
-            </Text>
-            <Text style={{ color: hasSymbol ? "green" : "black" }}>
-              ✅ a symbol
-            </Text>
+            <View style={{ flexDirection: "row" }}>
+              <Checkbox
+                checkBoxColor={Colors.blue1()}
+                uncheckedCheckBoxColor={Colors.gray1()}
+                disabled={true}
+                isChecked={minLength}
+              />
+              <Text style={{ color: minLength ? "green" : "black" }}>
+                characters minimum
+              </Text>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+              <Checkbox
+                checkBoxColor={Colors.blue1()}
+                uncheckedCheckBoxColor={Colors.gray1()}
+                disabled={true}
+                isChecked={hasNumber}
+              />
+              <Text style={{ color: hasNumber ? "green" : "black" }}>
+                a number
+              </Text>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+              <Checkbox
+                checkBoxColor={Colors.blue1()}
+                uncheckedCheckBoxColor={Colors.gray1()}
+                disabled={true}
+                isChecked={hasSymbol}
+              />
+              <Text style={{ color: hasSymbol ? "green" : "black" }}>
+                a symbol
+              </Text>
+            </View>
           </View>
 
           {/* Verify Button */}
