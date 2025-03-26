@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
   },
   otpActive: {
     borderColor: "purple",
+    color: Colors.black()
   },
   verifyButton: {
     backgroundColor: "#B185E6",

@@ -60,7 +60,7 @@ const VerifyEmailOtpScreen = ({ navigation }: any) => {
             }}
           >
             <TextInput
-              style={{ flex: 1, height: 40 }}
+              style={{ flex: 1, height: 40, color: Colors.black() }}
               secureTextEntry={isSecure}
               placeholderTextColor={Colors.gray3()}
               placeholder="Enter password"

@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     fontSize: scaleFont(18),
     backgroundColor: Colors.white(),
+    color: Colors.black()
   },
   progressContainer: {
     flexDirection: "row",
