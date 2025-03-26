@@ -44,7 +44,9 @@ const EmailScreen = ({ navigation }: any) => {
             title="Create an account"
             textStyle={styles.buttonText}
             onPress={() => {
-              navigation.navigate('VerifyEmailOtpScreen')
+              navigation.navigate('VerifyEmailOtpScreen',{
+                email:email
+              })
             }}
           />
         </View>

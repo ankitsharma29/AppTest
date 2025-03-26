@@ -14,11 +14,11 @@ import Colors from "../../resource/theme/color";
 import Fonts from "../../resource/theme/font";
 import FooterComponent from "../../Components/FooterComponent";
 const { scaleSize, scaleFont } = Mixins;
-const VerifyEmailOtpScreen = ({ navigation }: any) => {
+const VerifyEmailOtpScreen = ({ navigation, route }: any) => {
   const [code, setCode] = useState(["", "", "", "", ""]);
   const inputs = useRef([]);
   const [disabled, setDisable] = useState<boolean>(false);
-  console.log("disabled", disabled);
+  const email = route?.params?.email;
 
   // Handle OTP input
   const handleChange = (text, index) => {
@@ -53,7 +53,7 @@ const VerifyEmailOtpScreen = ({ navigation }: any) => {
         <View style={{ flex: 0.9, gap: scaleSize(15) }}>
           {/* Subtitle */}
           <Text style={styles.subtitle}>
-            We just sent a 5-digit code to sarah.jansen@gmail.com, enter it
+            We just sent a 5-digit code to {email || "ankit@gmail.com"} enter it
             below:
           </Text>
           {/* Code Label */}
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   otpActive: {
     borderColor: "purple",
-    color: Colors.black()
+    color: Colors.black(),
   },
   verifyButton: {
     backgroundColor: "#B185E6",
