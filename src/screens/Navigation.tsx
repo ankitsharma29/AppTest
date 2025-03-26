@@ -6,6 +6,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Colors from "../resource/theme/color";
 import SplashScreen from "./splash/SplashScreen";
 import AuthScreen from "./Authentication/AuthScreen";
+import EmailScreen from "./Authentication/EmailScreen";
+import VerifyEmailOtpScreen from "./Authentication/VerifyEmailOtpScreen";
+import CreatePassword from "./Authentication/CreatePassword";
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +57,18 @@ const Navigation = () => {
         <Stack.Screen
           name="AuthScreen"
           component={AuthScreen}
+        />
+        <Stack.Screen
+          name="EmailScreen"
+          component={EmailScreen}
+        />
+        <Stack.Screen
+          name="VerifyEmailOtpScreen"
+          component={VerifyEmailOtpScreen}
+        />
+        <Stack.Screen
+          name="CreatePassword"
+          component={CreatePassword}
         />
       </Stack.Navigator>
     </NavigationContainer>

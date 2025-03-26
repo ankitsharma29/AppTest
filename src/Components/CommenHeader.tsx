@@ -16,20 +16,16 @@ interface Props {
   backIconDisabled?: boolean;
 }
 
-const CommenHeader = ({
-  title,
-  onPress,
-  backIconDisabled = true,
-}: any) => {
+const CommenHeader = ({ title, onPress, backIconDisabled = true }: any) => {
   return (
     <View style={styles.headerContainer}>
-      <TouchableOpacity onPress={onPress} disabled={!backIconDisabled}>
-        <View style={styles.leftContainer}>
+      <View style={styles.leftContainer}>
+        <TouchableOpacity onPress={onPress}>
           <Icon name="arrow-left" size={20} color={Colors.black()} />
-          <Text style={styles.textStyle}>{title}</Text>
-          <Text></Text>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+        <Text style={styles.textStyle}>{title}</Text>
+        <Text></Text>
+      </View>
     </View>
   );
 };

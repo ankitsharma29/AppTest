@@ -34,7 +34,7 @@ const AuthScreen = ({ navigation }: any) => {
       <CommenHeader
         title={"Create new account"}
         backIconDisabled={false}
-        CartPress={() => {
+        onPress={() => {
           navigation.goBack();
         }}
       />
@@ -52,6 +52,7 @@ const AuthScreen = ({ navigation }: any) => {
             textStyle={styles.buttonText}
             onPress={() => {
               console.log("Success");
+              navigation.navigate('EmailScreen')
             }}
           />
 
@@ -61,8 +62,8 @@ const AuthScreen = ({ navigation }: any) => {
               return <IconComponent item={item} />;
             })}
           </View>
-          {/* Footer Section */}
         </View>
+        {/* Footer Section */}
         <View style={{ flex: 0.1 }}>
           <FooterComponent />
         </View>
