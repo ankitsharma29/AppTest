@@ -67,6 +67,7 @@ const VerifyEmailOtpScreen = ({ navigation }: any) => {
                 ref={(el) => (inputs.current[index] = el)}
                 style={[styles.otpInput, digit ? styles.otpActive : null]}
                 keyboardType="number-pad"
+                placeholderTextColor={Colors.gray3()}
                 maxLength={1}
                 value={digit}
                 onChangeText={(text) => handleChange(text, index)}

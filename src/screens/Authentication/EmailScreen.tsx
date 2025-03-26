@@ -34,6 +34,7 @@ const EmailScreen = ({ navigation }: any) => {
               style={styles.inputStyle}
               placeholder="Enter your email"
               keyboardType="email-address"
+              placeholderTextColor={Colors.gray3()}
               value={email}
               onChangeText={(text) => setEmail(text)}
             />
